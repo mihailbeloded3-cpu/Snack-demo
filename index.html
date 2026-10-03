@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>СНЭК — снэки, шаверма и кофе в Брянске</title>
+  <meta name="description" content="СНЭК на Бежицкой, 1В: сырные палочки, стрипсы, наггетсы, шаверма, хот-доги, бургеры, кофе и Bubble Tea. Ежедневно с 11:00 до 22:00.">
+  <meta name="theme-color" content="#0B0B0B">
+  <!-- Демо: закрыто от поисковиков. Уберите эту строку, когда сайт станет официальным. -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- SVG-иконки: подключаются через <use href="#i-..."> -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></symbol>
+    <symbol id="i-wrap" viewBox="0 0 24 24"><path d="M7 3h10l-2 18H9L7 3z"/><path d="M7.6 9h8.8"/><path d="M10 3l1 6M14 3l-1 6"/></symbol>
+    <symbol id="i-fries" viewBox="0 0 24 24"><path d="M6 11h12l-1.5 10h-9L6 11z"/><path d="M9 11V4M12 11V2M15 11V5"/></symbol>
+    <symbol id="i-hotdog" viewBox="0 0 24 24"><rect x="2" y="8" width="20" height="8" rx="4"/><path d="M5.5 12c1.1-1.6 2.2 1.6 3.3 0s2.1 1.6 3.2 0 2.2 1.6 3.3 0 2.1 1.6 3.2 0"/></symbol>
+    <symbol id="i-burger" viewBox="0 0 24 24"><path d="M4 10c0-3.3 3.6-6 8-6s8 2.7 8 6H4z"/><path d="M3 13.5h18"/><path d="M4 17h16v1a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1z"/></symbol>
+    <symbol id="i-glass" viewBox="0 0 24 24"><path d="M6 6h12l-1.5 15h-9L6 6z"/><path d="M6.6 11h10.8"/><path d="M13 6l2-4h3"/></symbol>
+    <symbol id="i-cup"viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="logo" href="#top" aria-label="СНЭК — на главную">СНЭК</a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#menu">Меню</a>
+        <a href="#about">О нас</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <a class="btn btn--primary header__call" href="tel:+79051000188">
+        <svg class="icon"><use href="#i-phone"/></svg>
+        Позвонить
+      </a>
+
+      <button class="burger" id="burger" type="button" aria-controls="nav" aria-expanded="false" aria-label="Открыть меню">
+        <svg class="icon burger__open"><use href="#i-menu"/></svg>
+        <svg class="icon burger__close"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Первый экран -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow">
+            <svg class="icon"><use href="#i-pin"/></svg>
+            Брянск · Бежицкая, 1В
+          </p>
+          <h1>Снэки, шаверма и&nbsp;кофе — <span class="mark">быстро</span> и&nbsp;сытно</h1>
+          <p class="lead">Жарим сырные палочки, стрипсы и картофель фри, заворачиваем сочную шаверму и варим кофе. Зайдите перекусить или позвоните — приготовим к вашему приходу.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="tel:+79051000188">
+              <svg class="icon"><use href="#i-phone"/></svg>
+              +7 (905) 100-01-88
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#menu">Смотреть меню</a>
+          </div>
+          <p class="status" id="status" hidden>
+            <span class="status__dot"></span>
+            <span id="status-text"></span>
+          </p>
+        </div>
+
+        <div class="hero__blocks">
+          <div class="block block--yellow block--rating">
+            <span class="block__big">5,0</span>
+            <span class="stars" aria-hidden="true">
+              <svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg>
+            </span>
+            <span class="block__label">182 оценки гостей</span>
+          </div>
+          <div class="block block--dark">
+            <svg class="icon icon--lg"><use href="#i-award"/></svg>
+            <span class="block__title">Хорошее место 2026</span>
+          </div>
+          <div class="block block--outline">
+            <svg class="icon icon--lg"><use href="#i-clock"/></svg>
+            <span class="block__title">11:00–22:00</span>
+            <span class="block__label">ежедневно</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <span>Сырные палочки</span><span>Стрипсы</span><span>Наггетсы</span><span>Картофель фри</span><span>Шаверма</span><span>Хот-доги</span><span>Бургеры</span><span>Кофе</span><span>Bubble Tea</span>
+          <span>Сырные палочки</span><span>Стрипсы</span><span>Наггетсы</span><span>Картофель фри</span><span>Шаверма</span><span>Хот-доги</span><span>Бургеры</span><span>Кофе</span><span>Bubble Tea</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Хиты -->
+    <section class="section" id="hits">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">С чего начать</p>
+          <h2>Хиты</h2>
+        </div>
+        <div class="hits">
+          <article class="hit hit--accent reveal">
+            <span class="badge badge--dark">Сыр тянется</span>
+            <svg class="hit__icon"><use href="#i-fries"/></svg>
+            <h3>Сырные палочки</h3>
+            <p>Пять штук: хрустящая панировка снаружи, тягучий сыр внутри.</p>
+            <div class="hit__foot"><span>110 г</span><strong>370 ₽</strong></div>
+          </article>
+          <article class="hit reveal">
+            <span class="badge">Куриное филе</span>
+            <svg class="hit__icon"><use href="#i-fries"/></svg>
+            <h3>Стрипсы</h3>
+            <p>Четыре полоски куриного филе в золотистой панировке — сочные внутри.</p>
+            <div class="hit__foot"><span>165 г</span><strong>420 ₽</strong></div>
+          </article>
+          <article class="hit reveal">
+            <span class="badge">Фирменная</span>
+            <svg class="hit__icon"><use href="#i-wrap"/></svg>
+            <h3>Шаверма Snack</h3>
+            <p>Куриное филе, чеддер, хрустящие чипсы, морковь по-корейски и фирменный соус.</p>
+            <div class="hit__foot"><span>530 г</span><strong>590 ₽</strong></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Меню: карточки рисует script.js из массива MENU -->
+    <section class="section section--alt" id="menu">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Обновлено 27 сентября</p>
+          <h2>Меню</h2>
+        </div>
+        <div class="filters" id="filters" role="group" aria-label="Категории меню"></div>
+        <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+        <noscript><p class="note">Чтобы увидеть меню, включите JavaScript или позвоните нам: +7 (905) 100-01-88.</p></noscript>
+        <div class="menu-cta reveal">
+          <p>Выбрали? Позвоните — уточним наличие и ответим на вопросы.</p>
+          <a class="btn btn--primary" href="tel:+79051000188">
+            <svg class="icon"><use href="#i-phone"/></svg>
+            Позвонить
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- О месте -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about__text reveal">
+          <p class="eyebrow">О нас</p>
+          <h2>Место, где можно быстро и вкусно перекусить</h2>
+          <p>СНЭК — это горячие закуски: сырные палочки, стрипсы, наггетсы, крылышки и картофель фри. К ним — шаверма на любой вкус, хот-доги и бургеры, а запить можно кофе, лимонадом или Bubble Tea.</p>
+        </div>
+        <ul class="features">
+          <li class="feature reveal">
+            <svg class="icon icon--lg"><use href="#i-zap"/></svg>
+            <h3>Готовим быстро</h3>
+            <p>Собираем заказ при вас — без долгого ожидания.</p>
+          </li>
+          <li class="feature reveal">
+            <svg class="icon icon--lg"><use href="#i-layers"/></svg>
+            <h3>Щедрые порции</h3>
+            <p>Шаверма до 530 граммов — хватит на полноценный обед.</p>
+          </li>
+          <li class="feature reveal">
+            <svg class="icon icon--lg"><use href="#i-drop"/></svg>
+            <h3>Фирменные соусы</h3>
+            <p>Сырный, чесночный, горчичный, грибной, брусничный и шрирача.</p>
+          </li>
+          <li class="feature reveal">
+            <svg class="icon icon--lg"><use href="#i-cup"/></svg>
+            <h3>Кофе и Bubble Tea</h3>
+            <p>Авторские рафы, айс латте, лимонады и чай с шариками.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="section section--alt" id="reviews">
+      <div class="container">
+        <div class="section__head section__head--row reveal">
+          <div>
+            <p class="eyebrow">Отзывы</p>
+            <h2>Гости ставят 5,0</h2>
+          </div>
+          <div class="rating">
+            <span class="stars" aria-hidden="true">
+              <svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg>
+            </span>
+            <span>182 оценки · 152 отзыва</span>
+          </div>
+        </div>
+        <!-- ДЕМО: тексты ниже — образцы оформления. Замените их реальными отзывами гостей. -->
+        <div class="reviews">
+          <figure class="review reveal">
+            <blockquote>Здесь будет отзыв гостя о шаверме: что понравилось, какая начинка и соус запомнились.</blockquote>
+            <figcaption>Имя гостя <span>пример оформления</span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <blockquote>Здесь будет отзыв о скорости и обслуживании: как быстро приготовили и как встретили.</blockquote>
+            <figcaption>Имя гостя <span>пример оформления</span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <blockquote>Здесь будет отзыв о напитках: кофе, милкшейки или Bubble Tea.</blockquote>
+            <figcaption>Имя гостя <span>пример оформления</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="section" id="contacts">
+      <div class="container contacts">
+        <div class="contacts__info reveal">
+          <p class="eyebrow">Контакты</p>
+          <h2>Заходите или звоните</h2>
+          <ul class="contact-list">
+            <li>
+              <svg class="icon icon--lg"><use href="#i-pin"/></svg>
+              <div>
+                <span class="contact-list__label">Адрес</span>
+                <span class="contact-list__value">Брянск, Бежицкая ул., 1В</span>
+              </div>
+            </li>
+            <li>
+              <svg class="icon icon--lg"><use href="#i-phone"/></svg>
+              <div>
+                <span class="contact-list__label">Телефон</span>
+                <a class="contact-list__value" href="tel:+79051000188">+7 (905) 100-01-88</a>
+              </div>
+            </li>
+            <li>
+              <svg class="icon icon--lg"><use href="#i-clock"/></svg>
+              <div>
+                <span class="contact-list__label">Время работы</span>
+                <span class="contact-list__value">Ежедневно, 11:00–22:00</span>
+              </div>
+            </li>
+          </ul>
+          <a class="btn btn--primary btn--lg" href="tel:+79051000188">
+            <svg class="icon"><use href="#i-phone"/></svg>
+            Позвонить в СНЭК
+          </a>
+        </div>
+        <div class="map reveal">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?mode=search&amp;text=%D0%91%D1%80%D1%8F%D0%BD%D1%81%D0%BA%2C%20%D0%91%D0%B5%D0%B6%D0%B8%D1%86%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%201%D0%92&amp;z=16"
+            title="СНЭК на карте: Брянск, Бежицкая ул., 1В"
+            loading="lazy"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a class="logo" href="#top" aria-label="СНЭК — наверх">СНЭК</a>
+      <p>Брянск, Бежицкая ул., 1В · <a href="tel:+79051000188">+7 (905) 100-01-88</a> · 11:00–22:00</p>
+      <p class="footer__demo">© <span id="year">2026</span> · Демо-концепт сайта</p>
+    </div>
+  </footer>
+
+  <!-- Закреплённая кнопка звонка на телефонах -->
+  <a class="call-bar" href="tel:+79051000188">
+    <svg class="icon"><use href="#i-phone"/></svg>
+    Позвонить
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
