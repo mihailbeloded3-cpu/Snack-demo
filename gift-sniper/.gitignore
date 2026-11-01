@@ -1,0 +1,6 @@
+config.ini
+*.session
+*.session-journal
+recon_out/
+.venv/
+__pycache__/
